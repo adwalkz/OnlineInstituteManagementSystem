@@ -1,0 +1,169 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterAdmin.master.cs" Inherits="AkaarInstitute.MasterAdmin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head id="Head1" runat="server">
+        <title>ADMIN Login | akaarinstitute.ac.in</title>
+
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="author" content="ADITYA JAIN"/>
+
+        <link rel="stylesheet" href="Source/css/MasterStyle.css" />
+        <asp:ContentPlaceHolder ID="head" runat="server"></asp:ContentPlaceHolder>
+    </head>
+
+    <body>
+        <header>
+            <!-- NAV START -->
+            <nav class="navbar navbar-expand-lg navbar-dark bg-dark" >
+                <a class="navbar-brand" href="AdminIndex.aspx"> ADMIN </a>
+
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> STUDENT </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="AdminAdd.aspx?UT=Student"> ADD </a>
+                                <a class="dropdown-item" href="CmnSearch.aspx?UT=STUDENT&AC=View"> VIEW </a>
+                                <a class="dropdown-item" href="CmnSearch.aspx?UT=STUDENT&AC=Drop"> DELETE </a>
+                                <a class="dropdown-item" href="CmnSearch.aspx?UT=STUDENT&AC=Edit"> EDIT </a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> TEACHER </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="AdminAdd.aspx?UT=Teacher"> ADD </a>
+                                <a class="dropdown-item" href="CmnSearch.aspx?UT=TEACHER&AC=View"> VIEW </a>
+                                <a class="dropdown-item" href="CmnSearch.aspx?UT=TEACHER&AC=Drop"> DELETE </a>
+                                <a class="dropdown-item" href="CmnSearch.aspx?UT=TEACHER&AC=Edit"> EDIT </a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> ATTENDANT </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="AdminAdd.aspx?UT=Attendant"> ADD </a>
+                                <a class="dropdown-item" href="CmnSearch.aspx?UT=ATTENDANT&AC=View"> VIEW </a>
+                                <a class="dropdown-item" href="CmnSearch.aspx?UT=ATTENDANT&AC=Drop"> DELETE </a>
+                                <a class="dropdown-item" href="CmnSearch.aspx?UT=ATTENDANT&AC=Edit"> EDIT </a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown"> OFFER </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="AdminOffersPage.aspx"> ADD </a>
+                                <a class="dropdown-item" href="CmnSearch.aspx?UT=OFFER&AC=Drop"> DELETE </a>
+                            </div>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="AdminLeavePage.aspx"> LEAVE </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="CmnFees.aspx?UT=Admin"> FEES </a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="AdminNotificationsPage.aspx"> NOTIFICATIONS </a>
+                        </li>
+
+                        <li class="nav-item active">
+                            <input type="button" class="btn btn-dark" value="LOGOUT" data-target="#CallBackModal" data-toggle="modal" />
+                            <div class="modal fade" id="CallBackModal" tabindex="-1">
+                                <div class="modal-dialog modal-sm modal-dialog-centered">
+                                    <div class="modal-content">
+                                        <div class="modal-body">
+                                            <h4 class="modal-title text-body">Are you sure?</h4>
+                                        </div>
+                                        <div class="modal-footer">
+                                            <button class="btn btn-danger" data-dismiss="modal">NO</button>
+                                            <a href="VisitorLoginPage.aspx" class="btn btn-success" role="button">YES</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- NAV END -->
+        </header>
+
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server"> </asp:ContentPlaceHolder>
+        </div>
+
+        <footer id="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 footer-info">
+                            <h3>Akaar Educational Services Limited</h3>
+                            <p></p>
+                        </div>
+                        <div class="col-lg-2 col-md-6 footer-links">
+                            <h4>COMPANY</h4>
+                            <ul>
+                                <li> <a href="VisitorAboutUsPage.aspx">About Us</a></li>
+                                <li> <a href="VisitorGallery.aspx">Gallery</a></li>
+                                <li> <a href="Source/pdf/Visitor/Courses.pdf" target="_blank">Courses</a></li>
+                                <li> <a href="Source/pdf/Visitor/Prospectus.pdf" target="_blank">Prospectus</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-6 footer-contact">
+                            <h4>Reach Us</h4>
+                            <p> B-169, street II <br />
+                                <strong>PhNo: +91 1234-567-890</strong> <br />
+                                <strong>Email: support@akaarinstitute.com</strong>
+                            </p>
+
+                            <div class="social-links">
+                                <a href="https://twitter.com/adwalkz">
+                                    <img src="Source/img/Icon/twitter.jpg" style="height: 35px; width: 34px"/>
+                                </a>
+
+                                <a href="https://instagram.com/adwalkz">
+                                    <img src="Source/img/Icon/instagram.jpg" style="height: 35px; width: 34px"/>
+                                </a>
+
+                                <a href="https://facebook.com/adwalkz">
+                                    <img src="Source/img/Icon/facebook.jpg" style="height: 35px; width: 34px"/>
+                                </a>
+
+                                <a href="https://github.com/adwalkz">
+                                    <img src="Source/img/Icon/github.jpg" style="height: 35px; width: 34px"/>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-6 footer-student-area">
+                            <h4>Student Area</h4>
+                            <ul>
+                                <li> <a href="VisitorAkaarResult.aspx">Akaar Result</a></li>
+                                <li> <a href="Source/pdf/Visitor/Admission.pdf" target="_blank">Admission at Akaar</a></li>
+                                <hr class="w-25 mx-auto" />
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    &copy; Copyright <strong>AKAAR INSTITUTE</strong>. All Rights Reserved
+                </div>
+                <div class="credits">
+                    Designed and Developed by <a href="https://github.com/adwalkz"> ADITYA JAIN </a>
+                </div>
+            </div>
+        </footer>
+
+        <!-- FILES -->
+        <link rel="stylesheet" href="Source/css/bootstrap.min.css" />                <!-- BOOTSTRAP FILE -->
+        <script type="text/javascript" src="Source/jquery-3.4.1.min.js"></script>    <!-- JQUERY FILE -->
+        <script type="text/javascript" src="Source/js/bootstrap.min.js"></script>    <!-- JAVASCRIPT FILE -->
+    </body>
+</html>
